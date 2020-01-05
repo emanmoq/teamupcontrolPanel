@@ -1,0 +1,11 @@
+
+.userAvatar{
+    width:100px;
+}
+img{
+    width:100%;
+}
+.m-stack.m-stack--general.m-stack--ver>.m-stack__item.m-stack__item--middle{
+    height: 62px;
+    width: 100px;
+}
