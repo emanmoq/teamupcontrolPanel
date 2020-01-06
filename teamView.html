@@ -60,7 +60,37 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- end::Head -->
 
 <!-- begin::Body -->
+<style>
+.viewTeam{
+    background-image: url("assets/img/bg.png");
+    width:100%;
+    background-size: cover;
+    padding:100px;
+    text-align: center;
+}
+img{
+    width:100%;
+}
+.teamLogo{
+    margin:0 auto;
+    text-align: center;
+    width:120px;
+}
+.teamName{
+    font-size:18px;
+    color:white;
+}
+.whiteBox{
+    display:inline-block;
+    margin-right:20px;
+   width:70px;
+   height:50px;
 
+   text-align: center;
+    background-color:rgba(255,255,255,.4);
+    color:white;
+    border-radius: 5px;}
+</style>
 <body
     class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
 
@@ -613,76 +643,36 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
 
                         <!--begin::Form-->
-                        <form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
-                            <div class="m-portlet__body">
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">team name</label>
-                                    <div class="col-lg-6">
-                                        <input type="name" class="form-control m-input" placeholder="team name" disabled>
-                                      
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">team Logo</label>
-                                    <div class="col-lg-2">
-                                      <img src="assets/img/12.png" alt="" style="width:100%;">
-                                      
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">team Owner</label>
-                                    <div class="col-lg-6">
-                                        <input type="name" class="form-control m-input" placeholder="team owner" disabled>
-                                   
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">team Manager</label>
-                                    <div class="col-lg-6">
-                                        <input type="name" class="form-control m-input" placeholder="team Manager" disabled>
-                                   
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">team background</label>
-                                    <div class="col-lg-6">
-                                        <img src="assets/img/11.jpg" alt="">
-                                   
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">Team Players</label>
-                                    <div class="col-lg-6">
-                                        <input type="number" class="form-control m-input" placeholder="5" disabled>
-                                   
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">type</label>
-                                    <div class="col-lg-6">
-                                        <input type="number" class="form-control m-input" placeholder="football" disabled>
-                                   
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">Date</label>
-                                    <div class="col-lg-6">
-                                        <input type="date" class="form-control m-input" placeholder="12/12/2019" disabled>
-                                   
-                                    </div>
-                                </div>
-                                <div class="form-group m-form__group row">
-                                    <label class="col-lg-2 col-form-label">status</label>
-                                        <div class="col-3">
-                                            <span class="m-badge m-badge--success m-badge--wide">active</span>
-                                        </div>
-                                   
-                                </div>
-                             
+                 <div class="col-lg-6">
+                    <div class="viewTeam">
+                        <div class="teamLogo">
+                            <img src="assets/img/teamLogo.png" alt="">
+                        </div>
+                        <h4 class="teamName text-center"> Team Name</h4>
+                        <div class="details">
+                            <div class="players whiteBox">
+                                players<br>
+                                20
                             </div>
-            
-                        </form>
+                            <div class="awards whiteBox">
+                                awards<br>
+                                3
+                            </div>
+                            <div class="wins whiteBox">
+                                wins<br>
+                               7/10
+                            </div>
+                            <div class="followers whiteBox">
+                                followers<br>
+                               250
+                             </div>
+                        </div>
 
+                    </div>
+                    <div class="managerRate">
+                        
+                    </div>
+                 </div>
                         <!--end::Form-->
                     </div>
                 </div>
