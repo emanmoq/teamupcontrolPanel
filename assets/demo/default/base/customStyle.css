@@ -5,3 +5,6 @@
 img{
     width:100%;
 }
+.m-portlet__nav-item{
+    list-style-type: none;
+}
