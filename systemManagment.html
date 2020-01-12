@@ -612,13 +612,76 @@ License: You must have a valid license purchased only from themeforest(the above
 							</div>
 							<div class="m-portlet__head-tools text-right" style="margin-bottom:25px;">
 								<a href="#"
-									class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air newUserBtn">
+									class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air newUserBtn" data-toggle="modal" data-target="#addNewUserForm">
 									<span>
 										<i class="fa fa-plus"></i>
 										<span>New Account</span>
 									</span>
 								</a>
-								<div class="addNewAccountForm text-left" style="display: none;">
+								<div class="modal" tabindex="-1" role="dialog" id="addNewUserForm">
+									<div class="modal-dialog" role="document">
+									  <div class="modal-content">
+										<div class="modal-header">
+										  <h5 class="modal-title">Modal title</h5>
+										  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										  </button>
+										</div>
+										<form class="m-form m-form--fit m-form--label-align-right">
+											<div class="m-portlet__body">
+												<div class="form-group m-form__group">
+													<label for="accountName">Name</label>
+													<input type="text" class="form-control m-input" id="accountName"
+														aria-describedby="" placeholder="Enter Your Name">
+												</div>
+												<div class="form-group m-form__group">
+													<label for="accountUserName">user Name</label>
+													<input type="text" class="form-control m-input" id="accountUserName"
+														aria-describedby="" placeholder="Enter Your Name">
+												</div>
+												<div class="form-group m-form__group">
+													<label for="accountEmail">Email address</label>
+													<input type="email" class="form-control m-input" id="accountEmail"
+														aria-describedby="emailHelp" placeholder="Enter email">
+	
+												</div>
+												<div class="form-group m-form__group">
+													<label for="accountPassword">Password</label>
+													<input type="password" class="form-control m-input" id="accountPassword"
+														placeholder="Password">
+												</div>
+	
+												<div class="form-group m-form__group">
+													<label for="exampleSelect1">Select Type</label>
+													<select class="form-control m-input" id="exampleSelect1">
+														<option>Super Admin</option>
+														<option>Admin</option>
+	
+													</select>
+												</div>
+												<div class="form-group m-form__group">
+													<label for="exampleSelect2">Select level</label>
+													<select class="form-control m-input" id="exampleSelect2">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+													</select>
+												</div>
+	
+											</div>
+											<div class="m-portlet__foot m-portlet__foot--fit">
+												<div class="m-form__actions">
+													<button type="reset" class="btn btn-primary closeForm">Submit</button>
+													<button type="reset" class="btn btn-secondary closeForm">Cancel</button>
+												</div>
+											</div>
+										</form>
+									  </div>
+									</div>
+								  </div>
+							<!--
+									<div class="addNewUserForm text-left" style="display: none;">
 									<form class="m-form m-form--fit m-form--label-align-right">
 										<div class="m-portlet__body">
 											<div class="form-group m-form__group">
@@ -670,6 +733,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										</div>
 									</form>
 								</div>
+							-->
 
 							</div>
 						</div>
