@@ -105,6 +105,9 @@ License: You must have a valid license purchased only from themeforest(the above
     .PositionTable {
         display: none;
     }
+    #positionTable{
+        display: none;
+    }
 </style>
 
 <body
@@ -728,7 +731,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <form id="addNewPosition">
+                                                                    <form id="addNewPosition" name="addNewPosition">
                                                                         <div class="form-group m-form__group">
                                                                             <label for="PostionName"
                                                                                 class="Title">Position
@@ -737,6 +740,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 class="form-control m-input"
                                                                                 id="PostionName" aria-describedby=""
                                                                                 placeholder="Enter Your Name">
+                                                                                <p id="nameVal"></p>
                                                                         </div>
                                                                         <div class="form-group m-form__group">
                                                                             <label for="PostionArabicName"
@@ -750,7 +754,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         <div class="m-form__actions">
                                                                             <button type="submit" class="btn btn-primary"
                                                                                 form="addNewPosition" id="Positionsubmit"
-                                                                                value="Submit">Submit</button>
+                                                                                value="Submit" onclick="validateForm()"  >Submit</button>
                                                                             <button type="reset" class="btn btn-secondary"
                                                                                 data-dismiss="modal"
                                                                                 aria-label="Close">Cancel</button>
@@ -761,24 +765,25 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                         </div>
                                                     </div>
-                                             <!--
-                                                    <table class="table" >
-                                                        <thead>
-                                                            <tr>
-                                                                <th>
-                                                                    Position Name
-                                                                </th>
-                                                                <th>
-                                                                    الاسم
-                                                                </th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody id="PositionBodyTable">
-                                                    
-                                                        </tbody>
-
-                                                    </table>-->
+                                            
+                                               
                                                 </div>
+                                                <table class="table bordered" id="positionTable" style="margin-top:10px;" >
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Position Name
+                                                            </th>
+                                                            <th>
+                                                                الاسم
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="PositionBodyTable">
+                                                
+                                                    </tbody>
+
+                                                </table>
                                             </div>
 
 
@@ -1418,6 +1423,35 @@ License: You must have a valid license purchased only from themeforest(the above
 -->
 
     <!--end::Page Scripts -->
+    <script>
+     function validateForm() {
+        var x =document.getElementById("PostionName").value;
+        if (x == null || x == "") {
+            nameValidation = "Name must be filled out";
+            document.getElementById("nameVal").innerHTML = nameValidation;
+            return false;
+        }
+        else
+        {
+            var table = document.getElementById("positionTable");
+
+         //In the first step using InsertRow function you are creating a first row i.e tr 
+        var row = table.insertRow(table.rows.length);
+
+        //In the second step you create a cell i.e td dynamically
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+
+        // Here in step 3 you can add data to your cells from the modal popup inputs(According to your logic)
+        cell1.innerHTML = document.getElementById("PostionName").value;
+        cell2.innerHTML = document.getElementById("PostionArabicName").value;
+        document.getElementById("sportModal").classList.remove("show");
+        document.getElementById("sportModal").style.display = "none";  ;
+        document.getElementById("positionTable").style.display = "block";  
+        
+        }
+    }</script>
 </body>
 
 <!-- end::Body -->
