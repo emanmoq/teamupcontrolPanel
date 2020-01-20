@@ -39,6 +39,9 @@ License: You must have a valid license purchased only from themeforest(the above
             }
             else {
                 $(".sportBtn").css("display", "none");
+                $("#positionTable").css("display", "none");
+
+                
             }
         }
     </script>
@@ -771,22 +774,25 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <table class="table bordered" id="positionTable" style="margin-top:10px;" >
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                Position Name
-                                                            </th>
-                                                            <th>
-                                                                الاسم
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="PositionBodyTable">
-                                                
-                                                    </tbody>
-    
-                                                </table>
+                                                <div class="form-group m-form__group">
+                                                    <table class="table bordered" id="positionTable" style="margin-top:10px;" >
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Position Name
+                                                                </th>
+                                                                <th>
+                                                                    الاسم
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="PositionBodyTable">
+                                                    
+                                                        </tbody>
+        
+                                                    </table>
+                                                </div>
+                                               
                                             
                                             </div>
 
